@@ -22,25 +22,12 @@ const galleryMarkUp = galleryItems
 allGallery.innerHTML = galleryMarkUp;
 
 
-allGallery.addEventListener(`click`, onPictureClick);
 
-function onPictureClick(event) {
-  event.preventDefault();
-
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
-//   получить ссылку на link картинки 
 let gallery = new SimpleLightbox('.gallery a',{
     captionType: 	'attr',
     captionsData: `alt`,
     captionDelay: 250,
 });
   
-
-gallery.on('show.simplelightbox', function () {
-   
-});
-}
 
 
