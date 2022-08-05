@@ -22,6 +22,7 @@ function onFormSubmit(event){
     // очищаем форму после отправки
     event.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
+    console.log(formData);
 
 };
 
