@@ -11,6 +11,6 @@ const onPlay = function(data) {
 
 // console.log(`skip`, newTime);
 
-player.setCurrentTime(JSON.parse(localStorage.getItem("videoplayer-current-time")));
+player.setCurrentTime(JSON.parse(localStorage.getItem("videoplayer-current-time")) || 0);
 
 player.on('timeupdate', throttle(onPlay,1000));
