@@ -1,2 +1,0 @@
-document.querySelector("textarea");const e=document.querySelector("form");e.addEventListener("input",(function(e){t[e.target.name]=e.target.value,localStorage.setItem("feedback-form-state",JSON.stringify(t))})),e.addEventListener("submit",(function(e){e.preventDefault(),e.currentTarget.reset()}));const t={};!function(){const e=localStorage.getItem("feedback-form-state");for(const o in t)console.log(o),t.hasOwnProperty(o)&&(console.log(o),console.log(JSON.parse(e)))}();
-//# sourceMappingURL=03-feedback.d3fbd905.js.map
