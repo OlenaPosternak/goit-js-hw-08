@@ -1,0 +1,2 @@
+document.querySelector("textarea");const e=document.querySelector("form");e.addEventListener("input",(function(e){t[e.target.name]=e.target.value,localStorage.setItem("feedback-form-state",JSON.stringify(t))})),e.addEventListener("submit",(function(e){e.preventDefault(),e.currentTarget.reset(),localStorage.removeItem("feedback-form-state")}));const t={};!function(){const t=localStorage.getItem("feedback-form-state"),o=JSON.parse(t);for(const t in o)o.hasOwnProperty(t)&&(console.log(o[t]),e.name.textContent=o[t])}();
+//# sourceMappingURL=03-feedback.195faa9e.js.map
