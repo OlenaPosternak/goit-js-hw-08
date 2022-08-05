@@ -4,6 +4,7 @@ const form = document.querySelector(`form`);
 form.addEventListener(`input`, onInputChange);
 form.addEventListener(`submit`, onFormSubmit);
 
+
 const formData={};
 
 onPutSavedInfo ()
@@ -18,21 +19,22 @@ function onFormSubmit(event){
     event.preventDefault();
     // очищаем форму после отправки
     event.currentTarget.reset();
-    localStorage.removeItem('feedback-form-state');
 
 };
 
 function onPutSavedInfo (){
     const savedData = localStorage.getItem('feedback-form-state');
-    const data = JSON.parse(savedData);
+    // console.log(JSON.parse(savedData));
 
-    for (const key in data) {
+
+    for (const key in formData) {
+
+        console.log(key);
         // Если это собственное свойство - выполняем тело if
-        if (data.hasOwnProperty(key)) {
-          console.log(data[key]);
-         form.name.textContent = data[key];
+        if (formData.hasOwnProperty(key)) {
+          console.log(key);
+          console.log(JSON.parse(savedData));
 
-     
         }
     }
       
